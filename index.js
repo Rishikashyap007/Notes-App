@@ -1,4 +1,4 @@
-// const inputBox = document.querySelector('.input-box');
+const inputBox = document.querySelector('.input-box');
 const createBtn = document.querySelector('.create-btn img');
 console.log(createBtn);
 const notesCont = document.querySelector('.notes-container');
@@ -18,7 +18,9 @@ createBtn.addEventListener("click",addNotes);
 //     notesCont.appendChild(noteElement);
 //     inputBox.textContent = '';
 // }
-
+function updatestorage(){
+      localStorage.setItem('inputBox',notesCont.innerHTML)
+}
 function addNotes(){
     
     let notes = document.createElement('P');
@@ -39,6 +41,7 @@ function addNotes(){
     
     function deletenote(){
         notesCont.removeChild(notes)
+        updatestorage();
     }
 }
 
