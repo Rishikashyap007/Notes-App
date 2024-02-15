@@ -5,19 +5,6 @@ const notesCont = document.querySelector('.notes-container');
 
 createBtn.addEventListener("click",addNotes);
 
-// function addNotes() {
-//     let notes;
-
-//     notes = inputBox.textContent; 
-
-//     const noteElement = document.createElement('p');
-//     noteElement.textContent = notes;
-//     notesCont.classList.remove('hide');
-//     noteElement.classList.add('input-box') 
-//     console.log(noteElement);
-//     notesCont.appendChild(noteElement);
-//     inputBox.textContent = '';
-// }
 function updatestorage(){
       localStorage.setItem('inputBox',notesCont.innerHTML)
 }
